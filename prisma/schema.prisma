@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model items {
+  id             Int      @id @default(autoincrement())
+  name           String
+  note           String?
+  type           String?
+  summary        String?
+  level          Int?
+  weight         Int?
+  hp             Int?
+  mp             Int?
+  str            Int?
+  pow            Int?
+  vit            Int?
+  dex            Int?
+  agi            Int?
+  wis            Int?
+  atk            Int?
+  matk           Int?
+  def            Int?
+  mdef           Int?
+  dodge          Int?
+  uncanny_dodge  Int?
+  critical       Int?
+  hit            Int?
+  speed          Int?
+  fire           Int?
+  water          Int?
+  thunder        Int?
+  tree           Int?
+  freeze         Int?
+  min_damage     Int?
+  max_damage     Int?
+  min_pdamage    Int?
+  max_pdamage    Int?
+  picture        Int?
+}
